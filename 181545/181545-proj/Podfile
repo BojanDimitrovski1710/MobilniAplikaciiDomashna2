@@ -1,0 +1,10 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+
+target '181545-proj' do
+  use_frameworks!
+  pod 'MBProgressHUD'
+  pod 'Kingfisher', '~> 4.0'
+  pod 'GooglePlaces', '3.10.0'
+end

@@ -1,0 +1,25 @@
+1) Да користи мапи и локациски сервиси
+[Home/Location/AddLocationViewController , Home/Location/ViewLocationViewController]
+
+2) Да користи нотификации
+[Home/HomeViewController.swift func setupNotifications()]
+
+3) Да користи камера и уше најмалку еден сензор
+[Home/Profile/AddProfilePhotoViewController lines 124-144 func pickImageCameraButtonClicked() za camera, Login/loginViewController line 67 checkFields() za vibracii] 
+
+4) Да повикува надворешен сервис и да прикажува резултат
+[Home/Location/GooglePlacesManager func findPlaces() i func resolveLocation()]
+
+5) Да има оптоварено барем една визуелна компонента (Custom view компонента со дефинирани анимација и изглед во код) 
+[Login/loginViewController.swift lines 29-39 func setupUI() za izgled, lines 41-55 func shakeField(field) za animacii]
+
+6) Да користи pods или друг систем за 3rd party библиотеки и да се искористи барем една надворешна библиотека
+[Za pods se koristat GooglePlaces i MBProgressHUD, Login/loginViewController lines 59 i 66 za MBProgressHUD]
+
+7) Да има повеќе од едено view
+[Login/Main, Home/Home, Home/Profile/AddProfilePhoto, Home/Profile/Profile]
+
+8) Да памти состојба на апликацијата и кориснички податоци
+[Login/loginViewController login(), register(); Home/HomeViewController setupData()]
+
+	

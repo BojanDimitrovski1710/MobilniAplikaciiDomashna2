@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="pOG-kd-w6K">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EGO-L1-gz5" customClass="HomeViewController" customModule="_81545_proj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="Home" id="qKg-qn-Wuo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ERV-KF-OLK">
+                                <rect key="frame" x="10" y="10" width="355" height="557"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="proto1" rowHeight="200" id="RXQ-M3-bYX" customClass="LocationTableViewCell" customModule="_81545_proj" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="355" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RXQ-M3-bYX" id="Mh8-Cv-1kD">
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngX-Kf-uqv">
+                                                    <rect key="frame" x="45" y="11" width="325" height="77"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3V-0w-Qxs">
+                                                    <rect key="frame" x="30" y="98" width="295" height="30"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="rxd-mi-jtD"/>
+                                                        <constraint firstAttribute="width" constant="180" id="yCi-EZ-6jn"/>
+                                                    </constraints>
+                                                    <state key="normal" title="View Details">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="viewDetailsClicked:" destination="RXQ-M3-bYX" eventType="touchUpInside" id="6wh-bh-gqW"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3c-ge-coD">
+                                                    <rect key="frame" x="30" y="136" width="295" height="30"/>
+                                                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="g1c-QD-OoG"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Delete">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="deleteSelected:" destination="RXQ-M3-bYX" eventType="touchUpInside" id="ru8-NK-AyX"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="k3V-0w-Qxs" secondAttribute="trailing" constant="15" id="5e9-2M-JJ1"/>
+                                                <constraint firstItem="ngX-Kf-uqv" firstAttribute="trailing" secondItem="Mh8-Cv-1kD" secondAttribute="trailingMargin" constant="30" id="D4u-Vd-Aow"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="t3c-ge-coD" secondAttribute="bottom" constant="23" id="DYI-9h-Tpv"/>
+                                                <constraint firstItem="ngX-Kf-uqv" firstAttribute="top" secondItem="Mh8-Cv-1kD" secondAttribute="topMargin" id="Djp-Ci-rsg"/>
+                                                <constraint firstItem="k3V-0w-Qxs" firstAttribute="top" secondItem="ngX-Kf-uqv" secondAttribute="bottom" constant="10" id="FMX-1p-Vdx"/>
+                                                <constraint firstItem="ngX-Kf-uqv" firstAttribute="leading" secondItem="Mh8-Cv-1kD" secondAttribute="leadingMargin" constant="30" id="OAH-gF-qqg"/>
+                                                <constraint firstItem="k3V-0w-Qxs" firstAttribute="leading" secondItem="t3c-ge-coD" secondAttribute="leading" id="SB2-Hg-nsf"/>
+                                                <constraint firstItem="k3V-0w-Qxs" firstAttribute="leading" secondItem="Mh8-Cv-1kD" secondAttribute="leadingMargin" constant="15" id="bsh-8l-CHB"/>
+                                                <constraint firstItem="k3V-0w-Qxs" firstAttribute="trailing" secondItem="t3c-ge-coD" secondAttribute="trailing" id="h4n-dG-q0Q"/>
+                                                <constraint firstItem="ngX-Kf-uqv" firstAttribute="top" secondItem="Mh8-Cv-1kD" secondAttribute="topMargin" id="r6F-GT-ZhV"/>
+                                                <constraint firstItem="t3c-ge-coD" firstAttribute="top" secondItem="k3V-0w-Qxs" secondAttribute="bottom" constant="8" id="vsZ-Rn-ov8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="deleteButton" destination="t3c-ge-coD" id="yvN-Mg-LmR"/>
+                                            <outlet property="title" destination="ngX-Kf-uqv" id="P1J-km-UR8"/>
+                                            <outlet property="viewDetails" destination="k3V-0w-Qxs" id="oeO-ia-kmr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9VS-Nd-vjX">
+                                <rect key="frame" x="30" y="597" width="315" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="33K-zx-GJl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Add New Location">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="presentAddNewLocation:" destination="EGO-L1-gz5" eventType="touchUpInside" id="Yzn-RN-azx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="Home"/>
+                        <constraints>
+                            <constraint firstItem="9VS-Nd-vjX" firstAttribute="top" secondItem="ERV-KF-OLK" secondAttribute="bottom" constant="30" id="1ZR-vd-cgy"/>
+                            <constraint firstItem="D11-P2-Txe" firstAttribute="bottom" secondItem="9VS-Nd-vjX" secondAttribute="bottom" constant="30" id="BfL-g4-orj"/>
+                            <constraint firstItem="ERV-KF-OLK" firstAttribute="top" secondItem="D11-P2-Txe" secondAttribute="top" constant="10" id="CLj-JW-6vJ"/>
+                            <constraint firstItem="ERV-KF-OLK" firstAttribute="leading" secondItem="D11-P2-Txe" secondAttribute="leading" constant="10" id="hM8-ZE-3eZ"/>
+                            <constraint firstItem="9VS-Nd-vjX" firstAttribute="leading" secondItem="D11-P2-Txe" secondAttribute="leading" constant="30" id="pfT-JV-Qhr"/>
+                            <constraint firstItem="ERV-KF-OLK" firstAttribute="centerX" secondItem="9VS-Nd-vjX" secondAttribute="centerX" id="tYf-6Y-iXc"/>
+                            <constraint firstItem="ERV-KF-OLK" firstAttribute="centerX" secondItem="qKg-qn-Wuo" secondAttribute="centerX" id="wTh-FH-Byu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="D11-P2-Txe"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mmV-Ts-gtX"/>
+                    <connections>
+                        <outlet property="addNewLocationButton" destination="9VS-Nd-vjX" id="Iri-tl-kz7"/>
+                        <outlet property="locationTableView" destination="ERV-KF-OLK" id="MCr-qe-Tpi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jKn-Gd-X4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-242.40000000000001" y="110.19490254872565"/>
+        </scene>
+    </scenes>
+</document>

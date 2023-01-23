@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Profile View Controller-->
+        <scene sceneID="ljF-JR-a5S">
+            <objects>
+                <viewController storyboardIdentifier="AddProfilePhoto" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HcW-oM-uLW" customClass="AddProfileViewController" customModule="_81545_proj" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kWe-vO-Qi7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTw-cA-yNg">
+                                <rect key="frame" x="30" y="648" width="155" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="v3o-Ym-Q0x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <state key="normal" title="Gallery"/>
+                                <connections>
+                                    <action selector="pickImageGalleryButtonClicked:" destination="HcW-oM-uLW" eventType="touchUpInside" id="meW-g7-kU5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGc-Mh-baF">
+                                <rect key="frame" x="30" y="720" width="354" height="42"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <state key="normal" title="Submit Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitImage:" destination="HcW-oM-uLW" eventType="touchUpInside" id="AaS-Uz-NbW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTC-S7-ak0">
+                                <rect key="frame" x="221" y="648" width="155" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="pickImageCameraButtonClicked:" destination="HcW-oM-uLW" eventType="touchUpInside" id="LRl-vc-gXO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currently Selected Photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acB-1t-hsC">
+                                <rect key="frame" x="30" y="59" width="354" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tuU-sL-WQb">
+                                <rect key="frame" x="30" y="188" width="354" height="354"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="354" id="N6w-yz-4m6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tuU-sL-WQb" firstAttribute="leading" secondItem="ZTw-cA-yNg" secondAttribute="leading" id="0W5-ia-zDu"/>
+                            <constraint firstItem="KGc-Mh-baF" firstAttribute="top" secondItem="ZTw-cA-yNg" secondAttribute="bottom" constant="30" id="1KW-kg-QKb"/>
+                            <constraint firstItem="ZTw-cA-yNg" firstAttribute="leading" secondItem="KGc-Mh-baF" secondAttribute="leading" id="GTk-ji-duZ"/>
+                            <constraint firstItem="acB-1t-hsC" firstAttribute="leading" secondItem="geI-Td-NbB" secondAttribute="leading" constant="30" id="GWb-uI-q08"/>
+                            <constraint firstItem="ZTw-cA-yNg" firstAttribute="baseline" secondItem="lTC-S7-ak0" secondAttribute="baseline" id="HBh-Gb-Ud8"/>
+                            <constraint firstItem="tuU-sL-WQb" firstAttribute="top" secondItem="acB-1t-hsC" secondAttribute="bottom" constant="93" id="NGj-Td-GhY"/>
+                            <constraint firstItem="geI-Td-NbB" firstAttribute="trailing" secondItem="acB-1t-hsC" secondAttribute="trailing" constant="30" id="OIV-wi-Qfp"/>
+                            <constraint firstItem="geI-Td-NbB" firstAttribute="trailing" secondItem="lTC-S7-ak0" secondAttribute="trailing" constant="38" id="YmX-OZ-UdR"/>
+                            <constraint firstItem="tuU-sL-WQb" firstAttribute="trailing" secondItem="acB-1t-hsC" secondAttribute="trailing" id="fbF-uR-Fhg"/>
+                            <constraint firstItem="tuU-sL-WQb" firstAttribute="trailing" secondItem="KGc-Mh-baF" secondAttribute="trailing" id="jrk-7e-ceQ"/>
+                            <constraint firstItem="geI-Td-NbB" firstAttribute="bottom" secondItem="KGc-Mh-baF" secondAttribute="bottom" constant="100" id="nDr-Ak-2xL"/>
+                            <constraint firstItem="acB-1t-hsC" firstAttribute="top" secondItem="geI-Td-NbB" secondAttribute="top" constant="15" id="qUc-fU-ZYp"/>
+                            <constraint firstItem="lTC-S7-ak0" firstAttribute="leading" secondItem="ZTw-cA-yNg" secondAttribute="trailing" constant="36" id="slK-C3-wsT"/>
+                            <constraint firstItem="tuU-sL-WQb" firstAttribute="leading" secondItem="acB-1t-hsC" secondAttribute="leading" id="uet-tL-UeG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="geI-Td-NbB"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="tuU-sL-WQb" id="0d9-Qa-rx6"/>
+                        <outlet property="pickImageCameraButton" destination="lTC-S7-ak0" id="VXJ-ZW-WD8"/>
+                        <outlet property="pickImageGalleryButton" destination="ZTw-cA-yNg" id="AL1-bF-LEm"/>
+                        <outlet property="submitImageButton" destination="KGc-Mh-baF" id="AOB-Nm-46B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F3a-zQ-bPM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153.62318840579712" y="147.99107142857142"/>
+        </scene>
+    </scenes>
+</document>
